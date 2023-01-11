@@ -103,13 +103,39 @@ export default {
       </div>
     </div>
     <div class="media">
-
+      <div class="mediacontainer">
+      <div class="sign-up">
+        <button>SIGN-UP</button>
+      </div>
+      <div class="socials">
+        <div>
+          FOLLOW US
+        </div>
+        <div>
+          <img src="../../public/img/footer-facebook.png" alt="">
+        </div>
+        <div>
+          <img src="../../public/img/footer-twitter.png" alt="">
+        </div>
+        <div>
+          <img src="../../public/img/footer-youtube.png" alt="">
+        </div>
+        <div>
+          <img src="../../public/img/footer-pinterest.png" alt="">
+        </div>
+        <div>
+          <img src="../../public/img/footer-periscope.png" alt="">
+        </div>
+      </div>
+      </div>
     </div>
   </div>
 </template>
 <style lang="scss">
+  @use '../components/styles/partials/variables';
+
   .info {
-    background-color: blue;
+    background-color: variables.$link-text;
     ul {
       display: flex;
       width: 70%;
@@ -161,6 +187,35 @@ export default {
       background-image: url(../../public/img/dc-logo-bg.png);
       background-size: cover;
       height: 350px;
+    }
+  }
+  .media {
+    background-color: rgb(55, 55, 55);
+    padding: 30px 0px;
+    .mediacontainer{
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      .sign-up{
+        align-self: center;
+        margin-left: 20px;
+        button {
+          border: 2px solid variables.$link-text;
+          padding: 10px 20px;
+          background: none;
+          color: white;
+        }
+      }
+      .socials{
+        display: flex;
+        align-items: center;
+        div {
+          margin-right: 20px;
+          color: variables.$link-text;
+          font-size: 20px;
+        }
+      }
     }
   }
 </style>

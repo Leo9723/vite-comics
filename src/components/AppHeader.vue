@@ -60,6 +60,8 @@ export default {
   </div>
 </template>
 <style lang="scss">
+  @use '../components/styles/partials/variables';
+
 .container {
     display: flex;
     width: 70%;
@@ -76,6 +78,9 @@ export default {
                 color: black;
                 margin-left: 20px;
                 padding-bottom: 30px;
+                &:hover{
+                    color: variables.$link-text;
+                }
             }
         }
     }
