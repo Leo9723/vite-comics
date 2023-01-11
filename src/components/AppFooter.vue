@@ -91,7 +91,16 @@ export default {
       </ul>
     </div>
     <div class="links">
-
+      <div>
+      <ul v-for="(list, index) in FooterList">
+        <span>{{ list.title }}</span>
+        <li v-for="(itemlist, num) in FooterList[index].Item">
+          {{ itemlist }}
+        </li>
+      </ul>
+      </div>
+      <div class="logo">
+      </div>
     </div>
     <div class="media">
 
@@ -121,6 +130,37 @@ export default {
           margin-left: 15px;
         }
       }
+    }
+  }
+  .links {
+    color: white;
+    background-image: url(../../public/img/footer-bg.jpg);
+    display: flex;
+    justify-content: space-around;
+    div {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 350px;
+      padding: 30px;
+      ul {
+        margin-top: 20px;
+        span {
+          font-weight: bold;
+        }
+        li {
+          list-style-type: none;
+          font-size: small;
+          margin: 5px 0px;
+        }
+      }
+    }
+    .logo {
+      width: 30%;
+      background-image: url(../../public/img/dc-logo-bg.png);
+      background-size: cover;
+      height: 350px;
     }
   }
 </style>
