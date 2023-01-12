@@ -91,8 +91,13 @@ export default {
     <card v-for="(cards, index) in Cards" :img="cards.thumb" :title="cards.series"/>
     <card></card>
   </div>
+    <div class="button">
+      <button>LOAD MORE</button>
+    </div>
 </template>
 <style lang="scss">
+  @use '../components/styles/partials/variables';
+
    .maincont {
     padding: 50px;
     background-color: black;
@@ -100,5 +105,19 @@ export default {
     font-size: 70px;
     display: flex;
     flex-wrap: wrap;
+   }
+   .button {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    button{
+      background-color: variables.$link-text;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: large;
+      padding: 5px 10px;
+    }
    }
 </style>
