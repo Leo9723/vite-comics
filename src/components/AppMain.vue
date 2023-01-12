@@ -1,9 +1,9 @@
 <script>
-import card from './card.vue'
+import Card from './card.vue'
 
 export default {
   components: {
-    card
+    Card
   },
   data(){
     return {
@@ -87,9 +87,14 @@ export default {
 }
 </script>
 <template lang="">
+  <div class="jumbotron">
+  </div>
+  <div class="first-button">
+    <button>CURRENT SERIES</button>
+  </div>
   <div class="maincont">
-    <card v-for="(cards, index) in Cards" :img="cards.thumb" :title="cards.series"/>
-    <card></card>
+    <Card v-for="(cards, index) in Cards" :img="cards.thumb" :title="cards.series"/>
+    <Card></Card>
   </div>
     <div class="button">
       <button>LOAD MORE</button>
@@ -97,7 +102,24 @@ export default {
 </template>
 <style lang="scss">
   @use '../components/styles/partials/variables';
-
+  .jumbotron {
+    background-image: url(../../public/img/jumbotron.jpg);
+    height: 300px;
+  }
+  .first-button {
+    background-color: black;
+    button {
+      background-color: variables.$link-text;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: large;
+      padding: 5px 10px;
+      margin-left: 40px;
+      position: relative;
+      bottom: 15px;
+    }
+  }
    .maincont {
     padding: 50px;
     background-color: black;
