@@ -161,6 +161,7 @@ export default {
   .links {
     color: white;
     background-image: url(../../public/img/footer-bg.jpg);
+    background-size: cover;
     display: flex;
     justify-content: space-around;
     div {
