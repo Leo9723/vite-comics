@@ -184,7 +184,7 @@ export default {
       }
     }
     .logo {
-      width: 30%;
+      width: 40%;
       background-image: url(../../public/img/dc-logo-bg.png);
       background-position: right center;
       background-repeat: no-repeat;
