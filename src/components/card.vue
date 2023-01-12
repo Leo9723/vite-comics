@@ -1,8 +1,8 @@
 <script>
 export default {
     props: {
-        img: string,
-        title: string,
+        img: String,
+        title: String,
     }
 }
 </script>

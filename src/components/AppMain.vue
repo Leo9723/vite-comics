@@ -94,7 +94,8 @@ export default {
   <div class="maincont">
     <AllCard v-for="(card, index) in Cards" :img="card.thumb" :title="card.series" />
 
-    
+    <Card></Card>
+
   </div>
 </template>
 <style lang="scss">
