@@ -168,7 +168,7 @@ export default {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      height: 350px;
+      height: 450px;
       padding: 30px;
       ul {
         margin-top: 20px;
@@ -186,7 +186,7 @@ export default {
       width: 30%;
       background-image: url(../../public/img/dc-logo-bg.png);
       background-size: cover;
-      height: 350px;
+      height: 450px;
     }
   }
   .media {

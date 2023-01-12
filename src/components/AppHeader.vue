@@ -5,46 +5,65 @@ export default {
             HeaderList: [
               {
                   item: 'CHARACTERS',
-                  url: '#'
+                  url: '#',
+                  active: false
               },
               {
                   item: 'COMIC',
-                  url: '#'
+                  url: '#',
+                  active: false
               },
               {
                   item: 'MOVIE',
-                  url: '#'
+                  url: '#',
+                  active: true
               },
               {
                   item: 'TV',
-                  url: '#'
+                  url: '#',
+                  active: false
               },
               {
                   item: 'GAMES',
-                  url: '#'
+                  url: '#',
+                  active: false
               },
               {
                   item: 'COLLECTIBLES',
-                  url: '#'
+                  url: '#',
+                  active: false
               },
               {
                   item: 'VIDEOS',
-                  url: '#'
+                  url: '#',
+                  active: false
               },
               {
                   item: 'FANS',
-                  url: '#'
+                  url: '#',
+                  active: false
               },
               {
                   item: 'NEWS',
-                  url: '#'
+                  url: '#',
+                  active: false
               },
               {
                   item: 'SHOP',
-                  url: '#'
+                  url: '#',
+                  active: false
               }
-            ]
-
+            ],
+              methods: {
+                ChangeActive() {
+                    if(this.items.active == true){
+                        this.items.active = false
+                    }
+                    else{
+                        this.items.active = true
+                    }
+                } 
+              },
     }
     }
 }
@@ -54,7 +73,7 @@ export default {
     <img src="/public/img/favicon.ico" alt="">
     <ul>
         <li v-for="(items, index) in HeaderList">
-            <a href="">{{ items.item }}</a>
+            <a href="" @click="ChangeActive()" :key="index" :class="items.active ? 'active' : ''">{{ items.item }}</a>
         </li>
     </ul>
   </div>
@@ -77,9 +96,10 @@ export default {
                 text-decoration: none;
                 color: black;
                 margin-left: 20px;
-                padding-bottom: 30px;
-                &:hover{
+                padding-bottom: 24px;
+                &.active, &:hover{
                     color: variables.$link-text;
+                    border-bottom: 3px solid variables.$link-text;
                 }
             }
         }
