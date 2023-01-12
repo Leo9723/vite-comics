@@ -185,7 +185,8 @@ export default {
     .logo {
       width: 30%;
       background-image: url(../../public/img/dc-logo-bg.png);
-      background-size: cover;
+      background-position: right center;
+      background-repeat: no-repeat;
       height: 450px;
     }
   }
